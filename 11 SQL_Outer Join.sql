@@ -40,6 +40,9 @@ values(100, 'Marketing'),
       (400, 'Sales'),
       (500, 'Purchase');
 
+select * from employee;
+select * from department;
+
 --Left outer join
 select id, empname,e.deptid, deptname
 from employee e left outer join department d

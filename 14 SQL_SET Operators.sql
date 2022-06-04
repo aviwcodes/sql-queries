@@ -42,3 +42,7 @@ select * from emp1
 except
 select * from emp2;
 
+select * from emp2
+except
+select * from emp1;
+

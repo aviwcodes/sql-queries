@@ -50,4 +50,11 @@ natural right join
 union
 select empid,empname,empcity,iff (ismarried=1,'Y','N') from emp2) t;
 
+select distinct  t.id ,name as name,city ,married , deptname 
+from emp1
+natural right join
+(select cast(id as varchar(10)) as id,name,city,MARRIED from emp1
+union
+select cast(empid as varchar(10)) as id,empname,empcity,iff (ismarried=1,'Y','N') from emp2) t;
+
 

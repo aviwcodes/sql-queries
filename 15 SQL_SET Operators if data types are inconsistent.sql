@@ -20,25 +20,25 @@ values(10,  'Ram',     'Pune',	 1),
 --id,name,city
 select id,name,city from emp1
 union
-select empid,empname,empcity from emp2
+select empid,empname,empcity from emp2;
 
 --id,name,city, married?
 select id,name,city,MARRIED from emp1
 union
-select empid,empname,empcity,ismarried from emp2
+select empid,empname,empcity,ismarried from emp2;
 
 --explicitly casting MARRIED and ismarried to varchar(5)
 select id,name,city,cast(MARRIED as varchar(5)) maritalstatus from emp1
 union
-select empid,empname,empcity,cast(ismarried as varchar(5)) maritalstatus  from emp2
+select empid,empname,empcity,cast(ismarried as varchar(5)) maritalstatus  from emp2;
 
 --using iff to get correct result
 select id,name,city,MARRIED from emp1
 union
-select empid,empname,empcity,iff (ismarried=1,'Y','N') from emp2
+select empid,empname,empcity,iff (ismarried=1,'Y','N') from emp2;
 
 --
 select id,name,city,MARRIED,DEPTNAME from emp1
 union
-select empid,empname,empcity,iff (ismarried=1,'Y','N'), NULL as DEPTNAME from emp2
+select empid,empname,empcity,iff (ismarried=1,'Y','N'), NULL as DEPTNAME from emp2;
 

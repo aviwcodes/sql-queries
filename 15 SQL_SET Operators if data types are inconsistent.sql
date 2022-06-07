@@ -1,7 +1,7 @@
 use database dev_db;
 use schema staging;
 
-create or replace TABLE EMP1 (   ID    VARCHAR(3),   NAME    VARCHAR(10),   CITY    VARCHAR(10),   MARRIED VARCHAR(1),   DEPTNAME VARCHAR(10)  );
+create or replace TABLE EMP1 (   ID    VARCHAR(3),   NAME    VARCHAR(10),   CITY    VARCHAR(10),   MARRIED CHAR(1),   DEPTNAME VARCHAR(10)  );
 create or replace TABLE EMP2 (   EMPID NUMBER(38,0), EMPNAME VARCHAR(10),   EMPCITY VARCHAR(10),   ISMARRIED BOOLEAN  );
 
 insert into emp1(id,name,city,married,deptname)

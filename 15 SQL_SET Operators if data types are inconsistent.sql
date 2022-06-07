@@ -42,3 +42,11 @@ select id,name,city,MARRIED,DEPTNAME from emp1
 union
 select empid,empname,empcity,iff (ismarried=1,'Y','N'), NULL as DEPTNAME from emp2;
 
+select distinct  t.id ,name as naa,city as citi,married as m, deptname 
+from emp1
+natural right join
+(select id,name,city,MARRIED from emp1
+union
+select empid,empname,empcity,iff (ismarried=1,'Y','N') from emp2) t;
+
+
